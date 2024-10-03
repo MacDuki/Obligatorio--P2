@@ -1,0 +1,5 @@
+C:\Users\Pedro Wattimo\source\repos\Dominio\obj\Debug\net8.0\Dominio.csproj.AssemblyReference.cache
+C:\Users\Pedro Wattimo\source\repos\Dominio\obj\Debug\net8.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pedro Wattimo\source\repos\Dominio\obj\Debug\net8.0\Dominio.AssemblyInfoInputs.cache
+C:\Users\Pedro Wattimo\source\repos\Dominio\obj\Debug\net8.0\Dominio.AssemblyInfo.cs
+C:\Users\Pedro Wattimo\source\repos\Dominio\obj\Debug\net8.0\Dominio.csproj.CoreCompileInputs.cache
