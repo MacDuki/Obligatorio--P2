@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Obligatorio\Consola.csproj" />
-  </ItemGroup>
-
 </Project>

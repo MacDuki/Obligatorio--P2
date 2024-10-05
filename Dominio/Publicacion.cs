@@ -45,7 +45,7 @@ namespace Dominio
                 _listaArticulos = ListaArticulos;
                 _tipoPublicacion = tipoPublicacion;
             }
-
+     
         // Métodos
         public void AgregarArticulo(Articulo articulo)
         {

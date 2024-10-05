@@ -52,6 +52,7 @@
             _ultimoId++;
             _id = _ultimoId;
             Nombre = nombre;
+            Apellido = apellido;
             Email = email;
             Contrasenia = contrasenia;
         }

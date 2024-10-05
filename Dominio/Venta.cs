@@ -1,8 +1,8 @@
 ﻿namespace Dominio
 {
-    public class Venta
+    public class Venta : Publicacion
     {
-        //NO DECLARO NI ULTIMO ID NI ID, PUESTO QUE LOS HEREDA DE LA CLASE PUBLICACIÓN. 
+        // NO DECLARO NI ULTIMO ID NI ID, PUESTO QUE LOS HEREDA DE LA CLASE PUBLICACIÓN.
 
         public bool _esOfertaRelampago;
         public float _precioVenta;
@@ -19,19 +19,20 @@
             set { _precioVenta = value; }
         }
 
-        public Venta() { }
-
-        public Venta(bool esOfertaRelampago, float precioVenta)
+       
+        public Venta(string nombre, string tipoPublicacion, bool esOfertaRelampago, float precioVenta)
+            : base(nombre, tipoPublicacion)
         {
             EsOfertaRelampago = esOfertaRelampago;
             PrecioVenta = precioVenta;
         }
+        
 
         public float AplicarDescuento()
         {
-            float  descuento = 0.20f;
-            PrecioVenta*= (1- descuento);
-            return PrecioVenta; 
+            float descuento = 0.20f;
+            PrecioVenta *= (1 - descuento);
+            return PrecioVenta;
         }
     }
 }

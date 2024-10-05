@@ -52,6 +52,9 @@
             Precio = precio;
         }
 
+
+        public void ValidarArticulo() { }
+
         public void ActualizarPrecio(float nuevoPrecio)
         {
             Precio = nuevoPrecio; 
@@ -60,9 +63,13 @@
 
         public override string ToString()
         {
-            return $"Nombre del artículo: {Nombre}.\n" +
+            return
+                "------------------------------------\n" +
+                $"Nombre del artículo: {Nombre}.\n" +
                 $"Categoría: {Categoria}.\n" +
-                $"Precio: {Precio}. ";
+                $"Precio: {Precio}.\n" +
+                "------------------------------------" 
+                ;
         }
 
     }
