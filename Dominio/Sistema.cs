@@ -137,14 +137,24 @@ public class Sistema
     public List <Articulo> filtrarArticulos (string categoriaSelected)
     {
        List <Articulo> articulosFinded = new List <Articulo>();
-        foreach (Articulo art in listaArticulos)
-        {
-            if (string.Equals(art.Categoria, categoriaSelected, StringComparison.OrdinalIgnoreCase))
-
+        
+            foreach (Articulo art in listaArticulos)
             {
-                articulosFinded.Add(art);
+                if (string.Equals(art.Categoria, categoriaSelected, StringComparison.OrdinalIgnoreCase))
+                {
+                    articulosFinded.Add(art);
+                }
+
+
             }
-        }
+
+        
+        if(articulosFinded.Count == 0)
+        {
+            throw new Exception("No se encontró ningún artículo."); 
+        };
+
+
         return articulosFinded;
     }
 

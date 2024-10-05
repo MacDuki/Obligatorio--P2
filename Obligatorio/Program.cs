@@ -66,6 +66,11 @@ namespace Consola
 
                                 break;
 
+
+                        case "4":
+
+                            break;
+
                         default:
                             Console.WriteLine("No se encontró la opción seleccionada.");
                             break;

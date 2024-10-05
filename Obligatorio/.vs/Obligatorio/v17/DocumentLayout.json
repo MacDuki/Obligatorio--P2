@@ -3,11 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Pedro Wattimo\\source\\repos\\Obligatorio\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{29E3334B-7866-42E8-8B81-BDA0D39339F0}|Consola.csproj|c:\\users\\pedro wattimo\\source\\repos\\obligatorio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29E3334B-7866-42E8-8B81-BDA0D39339F0}|Consola.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{93C5A690-72DC-4F9F-B9F6-4BEC3EF157E6}|..\\Dominio\\Dominio.csproj|c:\\users\\pedro wattimo\\source\\repos\\dominio\\sistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29E3334B-7866-42E8-8B81-BDA0D39339F0}|Consola.csproj|c:\\users\\pedro wattimo\\source\\repos\\obligatorio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29E3334B-7866-42E8-8B81-BDA0D39339F0}|Consola.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{93C5A690-72DC-4F9F-B9F6-4BEC3EF157E6}|..\\Dominio\\Dominio.csproj|c:\\users\\pedro wattimo\\source\\repos\\dominio\\publicacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{93C5A690-72DC-4F9F-B9F6-4BEC3EF157E6}|..\\Dominio\\Dominio.csproj|c:\\users\\pedro wattimo\\source\\repos\\dominio\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -17,9 +20,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{93C5A690-72DC-4F9F-B9F6-4BEC3EF157E6}|..\\Dominio\\Dominio.csproj|c:\\users\\pedro wattimo\\source\\repos\\dominio\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93C5A690-72DC-4F9F-B9F6-4BEC3EF157E6}|..\\Dominio\\Dominio.csproj|c:\\users\\pedro wattimo\\source\\repos\\dominio\\publicacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{93C5A690-72DC-4F9F-B9F6-4BEC3EF157E6}|..\\Dominio\\Dominio.csproj|c:\\users\\pedro wattimo\\source\\repos\\dominio\\administrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -39,7 +39,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
@@ -52,8 +52,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-04T20:48:09.311Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
@@ -65,12 +68,11 @@
               "RelativeToolTip": "..\\Dominio\\Oferta.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAIwCcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T20:18:19.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T20:18:19.415Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Subasta.cs",
               "DocumentMoniker": "C:\\Users\\Pedro Wattimo\\source\\repos\\Dominio\\Subasta.cs",
               "RelativeDocumentMoniker": "..\\Dominio\\Subasta.cs",
@@ -78,22 +80,17 @@
               "RelativeToolTip": "..\\Dominio\\Subasta.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T20:13:35.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "WhenOpened": "2024-10-05T20:13:35.416Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Articulo.cs",
               "DocumentMoniker": "C:\\Users\\Pedro Wattimo\\source\\repos\\Dominio\\Articulo.cs",
               "RelativeDocumentMoniker": "..\\Dominio\\Articulo.cs",
               "ToolTip": "C:\\Users\\Pedro Wattimo\\source\\repos\\Dominio\\Articulo.cs",
               "RelativeToolTip": "..\\Dominio\\Articulo.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAuwEYAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwEcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T19:44:03.697Z",
               "EditorCaption": ""
@@ -108,25 +105,11 @@
               "RelativeToolTip": "..\\Dominio\\Administrador.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T19:29:09.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T19:29:09.314Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Pedro Wattimo\\source\\repos\\Obligatorio\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Pedro Wattimo\\source\\repos\\Obligatorio\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBMAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T19:24:01.055Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Venta.cs",
               "DocumentMoniker": "C:\\Users\\Pedro Wattimo\\source\\repos\\Dominio\\Venta.cs",
               "RelativeDocumentMoniker": "..\\Dominio\\Venta.cs",
@@ -134,18 +117,17 @@
               "RelativeToolTip": "..\\Dominio\\Venta.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAxwBwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T19:27:35.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T19:27:35.047Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Publicacion.cs",
               "DocumentMoniker": "C:\\Users\\Pedro Wattimo\\source\\repos\\Dominio\\Publicacion.cs",
               "RelativeDocumentMoniker": "..\\Dominio\\Publicacion.cs",
               "ToolTip": "C:\\Users\\Pedro Wattimo\\source\\repos\\Dominio\\Publicacion.cs",
               "RelativeToolTip": "..\\Dominio\\Publicacion.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAIwC8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T20:09:11.86Z",
               "EditorCaption": ""
@@ -153,12 +135,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Pedro Wattimo\\source\\repos\\Obligatorio\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Pedro Wattimo\\source\\repos\\Obligatorio\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T19:24:01.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Sistema.cs",
               "DocumentMoniker": "C:\\Users\\Pedro Wattimo\\source\\repos\\Dominio\\Sistema.cs",
               "RelativeDocumentMoniker": "..\\Dominio\\Sistema.cs",
               "ToolTip": "C:\\Users\\Pedro Wattimo\\source\\repos\\Dominio\\Sistema.cs",
               "RelativeToolTip": "..\\Dominio\\Sistema.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAAA0wIgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T19:22:56.535Z",
               "EditorCaption": ""
