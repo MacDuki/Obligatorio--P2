@@ -8,7 +8,7 @@ namespace Dominio
         private List<Oferta> _listaOfertas;
         private float _precioFinal;
 
-       
+       //constructor 
         public Subasta(string nombre, string tipoPublicacion, float precioInicial)
             : base(nombre, tipoPublicacion)
         {
@@ -16,8 +16,16 @@ namespace Dominio
             _precioFinal = precioInicial;
         }
 
+        //Constructor precarga
+        public Subasta(string nombre, string tipoPublicacion, DateTime fechaPublicacion, DateTime fechaFinalizacion, float precioInicial)
+    : base(nombre, tipoPublicacion, fechaPublicacion, fechaFinalizacion)
+        {
+            _listaOfertas = new List<Oferta>();
+            _precioFinal = precioInicial;
+        }
+
         // Método para realizar una oferta
-     
+
         public void RealizarOferta(Cliente cliente, float monto, DateTime fecha)
         {
       

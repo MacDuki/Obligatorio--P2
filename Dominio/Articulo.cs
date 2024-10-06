@@ -53,11 +53,53 @@
         }
 
 
-        public void ValidarArticulo() { }
+        public void ValidarArticulo(string nombreArticulo, string categoriaArticulo, string precioArticulo)
+        {
+            ValidarNombre(nombreArticulo);
+            ValidarCategoria(categoriaArticulo);
+            ValidarPrecio(precioArticulo);
+        }
+
+        private static void ValidarNombre(string nombreArticulo)
+        {
+            if (nombreArticulo.Length < 5)
+            {
+                throw new Exception("Verifique que el nombre del artículo tenga por lo menos 5 caracteres.");
+            }
+        }
+
+        private static void ValidarCategoria(string categoriaArticulo)
+        {
+            if (categoriaArticulo.Length < 5)
+            {
+                throw new Exception("Verifique que la categoría tenga un largo de por lo menos 5 caracteres.");
+            }
+        }
+
+        private static void ValidarPrecio(string precioArticulo)
+        {
+            try
+            {
+                if (int.Parse(precioArticulo) <= 0) 
+                {
+                    throw new Exception("Verifique que el valor ingresado sea mayor a 0."); 
+                }
+            }
+            catch (FormatException ex) 
+            {
+                throw new Exception("Verifique que el valor ingresado sea un número.", ex); 
+            }
+        }
 
         public void ActualizarPrecio(float nuevoPrecio)
         {
-            Precio = nuevoPrecio; 
+            Precio = nuevoPrecio;
+        }
+
+        public static void AgregarArticulo(string nombre, string categoria, float precio)
+        {
+            Articulo unArticulo = new Articulo(nombre, categoria, precio);
+            Sistema.listaArticulos.Add(unArticulo);
         }
 
 
@@ -68,9 +110,10 @@
                 $"Nombre del artículo: {Nombre}.\n" +
                 $"Categoría: {Categoria}.\n" +
                 $"Precio: {Precio}.\n" +
-                "------------------------------------" 
+                "------------------------------------"
                 ;
         }
 
     }
+
 }

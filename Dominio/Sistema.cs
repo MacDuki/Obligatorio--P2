@@ -1,13 +1,13 @@
 ﻿namespace Dominio;
 public class Sistema
 {
-    public  List<Administrador> listaAdministradores = new List<Administrador>();
-    public  List<Cliente> listaClientes = new List<Cliente>();
-    public  List<Articulo> listaArticulos = new List<Articulo>();
-    public  List<Publicacion> listaPublicaciones = new List<Publicacion>();
+    public static List<Administrador> listaAdministradores = new List<Administrador>();
+    public static List<Cliente> listaClientes = new List<Cliente>();
+    public static List<Articulo> listaArticulos = new List<Articulo>();
+    public static List<Publicacion> listaPublicaciones = new List<Publicacion>();
 
     // PRECARGA DE DATOS.
-    public void PrecargarClientes()
+    private void PrecargarClientes()
     {
         listaClientes.AddRange(new List<Cliente>
         {
@@ -23,7 +23,7 @@ public class Sistema
             new Cliente("Carmen", "Ruiz", "carmen.ruiz@email.com", "carmen123", 950.50m)
         });
     }
-    public void PrecargarArticulos()
+    private void PrecargarArticulos()
     {
         listaArticulos.AddRange(new List<Articulo>
         {
@@ -79,7 +79,7 @@ public class Sistema
 
         });
     }
-    public void PrecargarAdministradores()
+    private void PrecargarAdministradores()
     {
         listaAdministradores.AddRange(new List<Administrador>
         {
@@ -87,33 +87,46 @@ public class Sistema
             new Administrador("Lucía", "Castro", "lucia.castro@email.com", "admin5678")
         });
     }
-    public void PrecargarPublicaciones()
+    private void PrecargarPublicaciones()
     {
         listaPublicaciones.AddRange(new List<Publicacion>
-        {
-            new Venta("Venta de Teclados", "venta", true, 69.99f),
-            new Venta("Venta de Laptops", "venta", false, 1199.99f),
-            new Venta("Venta de Sillas", "venta", false, 249.99f),
-            new Venta("Venta de Monitores", "venta", true, 149.99f),
-            new Venta("Venta de Smartphones", "venta", false, 699.99f),
-            new Venta("Venta de Auriculares", "venta", true, 79.99f),
-            new Venta("Venta de Impresoras", "venta", false, 129.99f),
-            new Venta("Venta de Cafeteras", "venta", true, 99.99f),
-            new Venta("Venta de Ventiladores", "venta", false, 45.99f),
-            new Venta("Venta de Licuadoras", "venta", true, 49.99f),
-            new Subasta("Subasta de Auriculares", "subasta", 50.00f),
-            new Subasta("Subasta de Teclados", "subasta", 30.00f),
-            new Subasta("Subasta de Sillas Ergonómicas", "subasta", 80.00f),
-            new Subasta("Subasta de Monitores", "subasta", 100.00f),
-            new Subasta("Subasta de Laptops", "subasta", 600.00f),
-            new Subasta("Subasta de Smartphones", "subasta", 300.00f),
-            new Subasta("Subasta de Impresoras", "subasta", 70.00f),
-            new Subasta("Subasta de Cafeteras", "subasta", 40.00f),
-            new Subasta("Subasta de Ventiladores", "subasta", 20.00f),
-            new Subasta("Subasta de Licuadoras", "subasta", 25.00f),
-        });
-        
+    {
+        new Venta("Venta de Teclados", "venta", new DateTime(2024, 1, 1), new DateTime(2024, 1, 10), true, 69.99f),
+        new Venta("Venta de Laptops", "venta", new DateTime(2024, 1, 2),  new DateTime(2024, 1, 11), false, 1199.99f),
+        new Venta("Venta de Sillas", "venta", new DateTime(2024, 1, 3),  new DateTime(2024, 1, 12), false, 249.99f),
+        new Venta("Venta de Monitores", "venta", new DateTime(2024, 1, 4),  new DateTime(2024, 1, 13), true, 149.99f),
+        new Venta("Venta de Smartphones", "venta", new DateTime(2024, 1, 5), new DateTime(2024, 1, 14), false, 699.99f),
+        new Venta("Venta de Auriculares", "venta", new DateTime(2024, 1, 6), new DateTime(2024, 1, 15), true, 79.99f),
+        new Venta("Venta de Impresoras", "venta", new DateTime(2024, 1, 7), new DateTime(2024, 1, 16), false, 129.99f),
+        new Venta("Venta de Cafeteras", "venta", new DateTime(2024, 1, 8), new DateTime(2024, 1, 17), true, 99.99f),
+        new Venta("Venta de Ventiladores", "venta", new DateTime(2024, 1, 9), new DateTime(2024, 1, 18), false, 45.99f),
+        new Venta("Venta de Licuadoras", "venta", new DateTime(2024, 1, 10), new DateTime(2024, 1, 19), true, 49.99f),
+        new Subasta("Subasta de Bicicletas", "subasta", new DateTime(2024, 1, 1), new DateTime(2024, 1, 10), 100.00f),
+        new Subasta("Subasta de Relojes", "subasta", new DateTime(2024, 1, 2), new DateTime(2024, 1, 11), 200.00f),
+        new Subasta("Subasta de Teléfonos", "subasta", new DateTime(2024, 1, 3), new DateTime(2024, 1, 12), 300.00f),
+        new Subasta("Subasta de Televisores", "subasta", new DateTime(2024, 1, 4), new DateTime(2024, 1, 13), 400.00f),
+        new Subasta("Subasta de Cámaras", "subasta", new DateTime(2024, 1, 5), new DateTime(2024, 1, 14), 500.00f),
+        new Subasta("Subasta de Libros", "subasta", new DateTime(2024, 1, 6), new DateTime(2024, 1, 15), 50.00f),
+        new Subasta("Subasta de Ropa", "subasta", new DateTime(2024, 1, 7), new DateTime(2024, 1, 16), 150.00f),
+        new Subasta("Subasta de Juguetes", "subasta", new DateTime(2024, 1, 8), new DateTime(2024, 1, 17), 75.00f),
+        new Subasta("Subasta de Muebles", "subasta", new DateTime(2024, 1, 9), new DateTime(2024, 1, 18), 600.00f),
+        new Subasta("Subasta de Computadoras", "subasta", new DateTime(2024, 1, 10), new DateTime(2024, 1, 19), 700.00f)
+
+
+    });
+
+      
+
+
     }
+    public void PrecargaDeDatos()
+    {
+        PrecargarPublicaciones();
+        PrecargarArticulos();
+        PrecargarAdministradores();
+        PrecargarClientes();
+       
+    } 
     public Sistema() { }
 
 
@@ -158,4 +171,20 @@ public class Sistema
         return articulosFinded;
     }
 
+    public List <Publicacion> ListarPublicaciones(string dateStart, string dateEnd)
+    {
+        DateTime dateStartCasted = DateTime.Parse(dateStart);
+        DateTime dateEndCasted = DateTime.Parse(dateEnd);
+        List <Publicacion> valuesFinded = new List<Publicacion>();
+        foreach (Publicacion element in listaPublicaciones)
+        {
+            if (element.FechaPublicacion >=  dateStartCasted && element.FechaFinalizacion <= dateEndCasted)
+            {
+                valuesFinded.Add(element);
+            }
+        }
+
+        return 
+        valuesFinded;
+    }
 }

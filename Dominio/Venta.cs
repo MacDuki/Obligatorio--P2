@@ -26,7 +26,15 @@
             EsOfertaRelampago = esOfertaRelampago;
             PrecioVenta = precioVenta;
         }
-        
+        //Constructor precarga
+        public Venta(string nombre, string tipoPublicacion, DateTime fechaPublicacion,  DateTime fechaFinalizacion, bool esOfertaRelampago, float precioVenta)
+    : base(nombre, tipoPublicacion, fechaPublicacion, fechaFinalizacion)
+        {
+            EsOfertaRelampago = esOfertaRelampago;
+            PrecioVenta = precioVenta;
+        }
+
+
 
         public float AplicarDescuento()
         {

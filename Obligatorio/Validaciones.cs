@@ -6,17 +6,15 @@
         {
             try
             {
-                int.Parse(valor);
-                int valorParseado = int.Parse(valor); 
 
-                if (valorParseado < 0)
+                if (int.Parse(valor) < 0)
                 {
-                    throw new Exception("Verifique que el valor ingresado sea un numérico positivo.");
+                    throw new Exception("Verifique que el valor numérico ingresado sea positivo.");
                 }
             }
-            catch (Exception)
+            catch (FormatException ex)
             {
-                Console.WriteLine("El valor ingresado no es numérico."); 
+                throw new Exception("Verifique que el valor ingresado sea numérico.", ex); 
             }
         }
 

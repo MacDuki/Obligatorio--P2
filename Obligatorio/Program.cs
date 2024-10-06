@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using System.Reflection.Metadata;
 
 
 namespace Consola
@@ -9,10 +10,8 @@ namespace Consola
         static void Main(string[] args)
         {
             Sistema sistema = new Sistema();
-            sistema.PrecargarClientes();
-            sistema.PrecargarArticulos();
-            sistema.PrecargarAdministradores();
-            Validaciones validacion = new Validaciones(); 
+            sistema.PrecargaDeDatos();
+            Validaciones validacion = new Validaciones();
 
             Console.WriteLine("¡Bienvenido al programa!\n");
 
@@ -32,10 +31,10 @@ namespace Consola
                     "PRESIONE 0 PARA SALIR.\n" +
                     "--------------------------------------");
 
-                seleccion = (Console.ReadLine()); 
+                seleccion = (Console.ReadLine());
                 try
                 {
-                    validacion.ValidarNumericoEntero(seleccion); 
+                    validacion.ValidarNumericoEntero(seleccion);
 
                     switch (seleccion)
                     {
@@ -58,16 +57,84 @@ namespace Consola
                             foreach (Articulo art in sistema.filtrarArticulos(categoriaSelected))
                             {
                                 Console.WriteLine("Articulo numero: " + counterCase2++);
-                                Console.WriteLine(art.ToString()); 
+                                Console.WriteLine(art.ToString());
                             }
+
+                            Console.WriteLine("Presione cualquier tecla para volver, 0 para salir del programa.");
+                            Console.ReadLine();
+                            Console.Clear(); 
                             break;
 
-                            case "3":   
+                        case "3":
+                            Console.Clear();
+                            Console.WriteLine("--------------------------\n" +
+                                               "FORMATO DE FECHA:\n" +
+                                               "MM/dd/yyyy\n" +
+                                               "--------------------------");
 
-                                break;
+
+                            Console.WriteLine("Indique desde que fecha quiere buscar..");
+                            string dateStart = Console.ReadLine();
+                            Console.WriteLine("Indique hasta que fecha quiere buscar..");
+                            string dateFinish = Console.ReadLine();
+                            int counterCase3 = 1;
+                            List<Publicacion> publicacionesFinded = sistema.ListarPublicaciones(dateStart, dateFinish);
+                            if (publicacionesFinded.Count == 0)
+                            {
+                                Console.WriteLine("No se encontraron publicaciones en el rango de fechas especificado.");
+                            }
+                            else
+                            {
+                                Console.Clear();
+                                foreach (Publicacion art in publicacionesFinded)
+                                {
+                                    Console.WriteLine("Publicacion numero: " + counterCase3++);
+                                    Console.WriteLine("----------------------------------------");
+                                    Console.WriteLine(art.ToString());
+                                    Console.WriteLine("----------------------------------------");
+                                }
+                            }
+
+                            Console.WriteLine("Presione cualquier tecla para volver, 0 para salir del programa.");
+                            Console.ReadLine();
+                            Console.Clear();
+
+
+                            break;
 
 
                         case "4":
+                            Console.Clear();
+                            string nombreArticulo;
+                            string categoriaArticulo;
+                            string precioArticulo;
+                            try
+                            {
+                                Articulo unArticulo = new Articulo();
+                                Console.WriteLine("Ingrese el nombre del artículo: ");
+                                nombreArticulo = Console.ReadLine();
+
+                                Console.WriteLine("Ingrese la categoría del artículo: ");
+                                categoriaArticulo = Console.ReadLine();
+
+                                Console.WriteLine("Ingrese el precio del artículo: ");
+                                precioArticulo = Console.ReadLine();
+
+                                unArticulo.ValidarArticulo(nombreArticulo, categoriaArticulo, precioArticulo);
+
+                                Articulo.AgregarArticulo(nombreArticulo, categoriaArticulo, float.Parse(precioArticulo)); 
+
+                                
+
+                                Console.WriteLine("Producto agregado con éxito. Presione cualquier tecla para continuar o 0 para salir del programa.");
+                                Console.ReadLine();
+                                Console.Clear(); 
+                            }
+                            catch (Exception ex) 
+                            {
+                                Console.WriteLine(ex.Message); 
+                            }
+
 
                             break;
 
@@ -77,12 +144,12 @@ namespace Consola
                     }
 
                 }
-                catch (Exception ex) 
+                catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message); 
+                    Console.WriteLine(ex.Message);
                 }
 
-               
+
             }
         }
     }

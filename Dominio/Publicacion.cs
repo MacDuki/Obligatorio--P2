@@ -39,13 +39,25 @@ namespace Dominio
         public Publicacion(string nombre, string tipoPublicacion)
             {
                 _id = ++s_ultimoId;
-                _nombre = Nombre;
+                _nombre = nombre;
                 _estado = EstadoPublicacion.ABIERTA;
                 _fechaPublicacion = DateTime.Now;
                 _listaArticulos = ListaArticulos;
                 _tipoPublicacion = tipoPublicacion;
             }
-     
+
+        //Constructor de precargas 
+        public Publicacion(string nombre, string tipoPublicacion, DateTime fechaPublicacion,DateTime fechaFinalizacion  )
+        {
+            _id = ++s_ultimoId;
+            _nombre = nombre;
+            _estado = EstadoPublicacion.ABIERTA;
+            _fechaPublicacion = fechaPublicacion;
+            _listaArticulos = ListaArticulos;
+            _tipoPublicacion = tipoPublicacion;
+            _fechaFinalizacion = fechaFinalizacion;
+        }
+
         // Métodos
         public void AgregarArticulo(Articulo articulo)
         {
@@ -58,7 +70,12 @@ namespace Dominio
                 throw new Exception("No se pueden agregar artículos a una publicación que no está ABIERTA.");
             }
         }
-
+        public override string ToString()
+        {
+            return $"ID: {_id}, Nombre: {_nombre}, Tipo: {_tipoPublicacion}," +
+                   $"Fecha de Publicación: {_fechaPublicacion:MM/dd/yyyy}, " +
+                   $"Fecha de Finalización: {_fechaFinalizacion:MM/dd/yyyy}, Estado: {_estado}";
+        }
         public float CalcularPrecioTotal()
             {
                 float total = 0;
@@ -83,6 +100,7 @@ namespace Dominio
                 }
             }
         }
+
 
        
 }

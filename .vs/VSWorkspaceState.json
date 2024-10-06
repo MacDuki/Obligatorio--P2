@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Dominio",
+    "\\Obligatorio"
   ],
-  "SelectedNode": "\\Obligatorio.sln",
+  "SelectedNode": "\\Dominio\\Articulo.cs",
   "PreviewInSolutionExplorer": false
 }
