@@ -11,16 +11,17 @@ public class Sistema
     {
         listaClientes.AddRange(new List<Cliente>
         {
-            new Cliente("Pedro", "García", "pedro.garcia@email.com", "pass1234", 1500.75m),
-            new Cliente("Laura", "López", "laura.lopez@email.com", "laura2021", 3200.50m),
-            new Cliente("Juan", "Martínez", "juan.martinez@email.com", "jm2345", 500.00m),
-            new Cliente("Ana", "Fernández", "ana.fernandez@email.com", "anafern", 1000.00m),
-            new Cliente("Luis", "Sánchez", "luis.sanchez@email.com", "luis2022", 2200.30m),
-            new Cliente("María", "González", "maria.gonzalez@email.com", "mgonzalez", 1800.80m),
-            new Cliente("Carlos", "Pérez", "carlos.perez@email.com", "carlitos", 2750.10m),
-            new Cliente("Elena", "Díaz", "elena.diaz@email.com", "elenadiaz", 1250.75m),
-            new Cliente("Javier", "Molina", "javier.molina@email.com", "javimolina", 3500.00m),
-            new Cliente("Carmen", "Ruiz", "carmen.ruiz@email.com", "carmen123", 950.50m)
+        new Cliente("Pedro", "García", "pedro.garcia@email.com", "pass1234", 1500.75m),
+        new Cliente("Ana", "Lopez", "ana.lopez@email.com", "anaPass99", 2100.50m),
+        new Cliente("Carlos", "Martinez", "carlos.martinez@email.com", "carlos123", 1800.00m),
+        new Cliente("Lucia", "Perez", "lucia.perez@email.com", "luciaSecure", 1350.30m),
+        new Cliente("Juan", "Ramirez", "juan.ramirez@email.com", "juanRpass", 2500.40m),
+        new Cliente("Laura", "Sanchez", "laura.sanchez@email.com", "laura!123", 3200.75m),
+        new Cliente("Miguel", "Fernandez", "miguel.fernandez@email.com", "miguelPass", 1100.20m),
+        new Cliente("Sofia", "Gomez", "sofia.gomez@email.com", "sofiaSafe", 2700.85m),
+        new Cliente("Diego", "Torres", "diego.torres@email.com", "diegoPass1", 1450.90m),
+        new Cliente("Valeria", "Castro", "valeria.castro@email.com", "valeria1234", 1980.60m),
+
         });
     }
     private void PrecargarArticulos()
