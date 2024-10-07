@@ -147,7 +147,7 @@ public class Sistema
         
     }
 
-    public List <Articulo> filtrarArticulos (string categoriaSelected)
+    public List <Articulo> FiltrarArticulos (string categoriaSelected)
     {
        List <Articulo> articulosFinded = new List <Articulo>();
         

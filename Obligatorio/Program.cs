@@ -11,7 +11,7 @@ namespace Consola
         {
             Sistema sistema = new Sistema();
             sistema.PrecargaDeDatos();
-            Validaciones validacion = new Validaciones();
+      
 
             Console.WriteLine("¡Bienvenido al programa!\n");
 
@@ -34,7 +34,7 @@ namespace Consola
                 seleccion = (Console.ReadLine());
                 try
                 {
-                    validacion.ValidarNumericoEntero(seleccion);
+                    Validaciones.ValidarNumericoEntero(seleccion);
 
                     switch (seleccion)
                     {
@@ -54,7 +54,7 @@ namespace Consola
                             Console.WriteLine("Indique la categoría...");
                             string categoriaSelected = Console.ReadLine();
                             int counterCase2 = 1;
-                            foreach (Articulo art in sistema.filtrarArticulos(categoriaSelected))
+                            foreach (Articulo art in sistema.FiltrarArticulos(categoriaSelected))
                             {
                                 Console.WriteLine("Articulo numero: " + counterCase2++);
                                 Console.WriteLine(art.ToString());
@@ -75,10 +75,14 @@ namespace Consola
 
                             Console.WriteLine("Indique desde que fecha quiere buscar..");
                             string dateStart = Console.ReadLine();
+                           
                             Console.WriteLine("Indique hasta que fecha quiere buscar..");
                             string dateFinish = Console.ReadLine();
                             int counterCase3 = 1;
+                            Validaciones.ValidarFecha(dateStart);
+                            Validaciones.ValidarFecha(dateFinish);
                             List<Publicacion> publicacionesFinded = sistema.ListarPublicaciones(dateStart, dateFinish);
+              
                             if (publicacionesFinded.Count == 0)
                             {
                                 Console.WriteLine("No se encontraron publicaciones en el rango de fechas especificado.");

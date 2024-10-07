@@ -2,7 +2,7 @@
 {
     public  class Validaciones
     {
-        public void ValidarNumericoEntero(string valor)
+        public static void ValidarNumericoEntero(string valor)
         {
             try
             {
@@ -18,6 +18,17 @@
             }
         }
 
+        public static void ValidarFecha(string fecha)
+        {
+            try
+            {
+                DateTime.Parse(fecha);
+            }
+            catch (FormatException ex)
+            {
+                throw new Exception("Verifique que el valor ingresado sea una fecha.", ex);
+            }
+        }
 
     }
 
