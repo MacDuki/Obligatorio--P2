@@ -1,8 +1,8 @@
 ﻿namespace Dominio;
 public class Sistema
 {
-    public static List<Administrador> listaAdministradores = new List<Administrador>();
-    public static List<Cliente> listaClientes = new List<Cliente>();
+ 
+    public static List<Usuario> listaUsario = new List<Usuario>();
     public static List<Articulo> listaArticulos = new List<Articulo>();
     public static List<Publicacion> listaPublicaciones = new List<Publicacion>();
 
@@ -131,22 +131,23 @@ public class Sistema
     public Sistema() { }
 
 
-    public void ListarClientes() 
+    public void ListarClientes()
     {
-        //VERIFICA QUE HAYA POR LO MENOS UN CLIENTE REGISTRADO PARA MOSTRAR LA LISTA. 
-        if (listaClientes.Count > 0)
+        var clientes = listaUsario.OfType<Cliente>().ToList();
+
+        if (clientes.Count > 0)
         {
-            foreach (Cliente unCliente in listaClientes)
+            foreach (Cliente unCliente in clientes)
             {
                 Console.WriteLine(unCliente.ToString());
-            } 
+            }
         }
-        else 
+        else
         {
-            throw new Exception("No se encuentran clientes agregados."); 
+            throw new Exception("No se encuentran clientes agregados.");
         }
-        
     }
+
 
     public List <Articulo> FiltrarArticulos (string categoriaSelected)
     {
