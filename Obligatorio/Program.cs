@@ -1,5 +1,4 @@
 ﻿using Dominio;
-using System.Reflection.Metadata;
 
 
 namespace Consola
@@ -11,7 +10,7 @@ namespace Consola
         {
             Sistema sistema = new Sistema();
             sistema.PrecargaDeDatos();
-      
+
 
             Console.WriteLine("¡Bienvenido al programa!\n");
 
@@ -45,7 +44,13 @@ namespace Consola
                             Console.Clear();
                             Console.WriteLine("Presione cualquier tecla para mostrar el listado de clientes.");
                             Console.ReadLine();
-                            sistema.ListarClientes();
+
+                            foreach (Cliente cliente in sistema.ListarClientes())
+                            {
+                                Console.WriteLine(cliente.ToString()); 
+                            }
+
+
                             Console.WriteLine("Presione cualquier tecla para volver, 0 para salir del programa.");
                             Console.ReadLine();
                             break;
@@ -62,7 +67,7 @@ namespace Consola
 
                             Console.WriteLine("Presione cualquier tecla para volver, 0 para salir del programa.");
                             Console.ReadLine();
-                            Console.Clear(); 
+                            Console.Clear();
                             break;
 
                         case "3":
@@ -75,14 +80,14 @@ namespace Consola
 
                             Console.WriteLine("Indique desde que fecha quiere buscar..");
                             string dateStart = Console.ReadLine();
-                           
+
                             Console.WriteLine("Indique hasta que fecha quiere buscar..");
                             string dateFinish = Console.ReadLine();
                             int counterCase3 = 1;
                             Validaciones.ValidarFecha(dateStart);
                             Validaciones.ValidarFecha(dateFinish);
                             List<Publicacion> publicacionesFinded = sistema.ListarPublicaciones(dateStart, dateFinish);
-              
+
                             if (publicacionesFinded.Count == 0)
                             {
                                 Console.WriteLine("No se encontraron publicaciones en el rango de fechas especificado.");
@@ -126,17 +131,17 @@ namespace Consola
 
                                 unArticulo.ValidarArticulo(nombreArticulo, categoriaArticulo, precioArticulo);
 
-                                Articulo.AgregarArticulo(nombreArticulo, categoriaArticulo, float.Parse(precioArticulo)); 
+                                Articulo.AgregarArticulo(nombreArticulo, categoriaArticulo, float.Parse(precioArticulo));
 
-                                
+
 
                                 Console.WriteLine("Producto agregado con éxito. Presione cualquier tecla para continuar o 0 para salir del programa.");
                                 Console.ReadLine();
-                                Console.Clear(); 
+                                Console.Clear();
                             }
-                            catch (Exception ex) 
+                            catch (Exception ex)
                             {
-                                Console.WriteLine(ex.Message); 
+                                Console.WriteLine(ex.Message);
                             }
 
 

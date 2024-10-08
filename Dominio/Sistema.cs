@@ -1,15 +1,15 @@
 ﻿namespace Dominio;
 public class Sistema
 {
- 
-    public static List<Usuario> listaUsario = new List<Usuario>();
+
+    public static List<Usuario> listaUsuario = new List<Usuario>();
     public static List<Articulo> listaArticulos = new List<Articulo>();
     public static List<Publicacion> listaPublicaciones = new List<Publicacion>();
 
     // PRECARGA DE DATOS.
     private void PrecargarClientes()
     {
-        listaClientes.AddRange(new List<Cliente>
+        listaUsuario.AddRange(new List<Cliente>
         {
         new Cliente("Pedro", "García", "pedro.garcia@email.com", "pass1234", 1500.75m),
         new Cliente("Ana", "Lopez", "ana.lopez@email.com", "anaPass99", 2100.50m),
@@ -82,7 +82,7 @@ public class Sistema
     }
     private void PrecargarAdministradores()
     {
-        listaAdministradores.AddRange(new List<Administrador>
+        listaUsuario.AddRange(new List<Administrador>
         {
             new Administrador("Carlos", "Ramírez", "carlos.ramirez@email.com", "admin1234"),
             new Administrador("Lucía", "Castro", "lucia.castro@email.com", "admin5678")
@@ -116,7 +116,7 @@ public class Sistema
 
     });
 
-      
+
 
 
     }
@@ -126,67 +126,71 @@ public class Sistema
         PrecargarArticulos();
         PrecargarAdministradores();
         PrecargarClientes();
-       
-    } 
+
+    }
     public Sistema() { }
 
 
-    public void ListarClientes()
+    public List<Cliente> ListarClientes()
     {
-        var clientes = listaUsario.OfType<Cliente>().ToList();
+        List<Cliente> listaAuxiliar = new List<Cliente>();
 
-        if (clientes.Count > 0)
+
+        foreach (Usuario unUsuario in listaUsuario)
         {
-            foreach (Cliente unCliente in clientes)
+            if (unUsuario is Cliente unCliente)
             {
-                Console.WriteLine(unCliente.ToString());
+                listaAuxiliar.Add(unCliente);
             }
         }
-        else
+
+        if (listaAuxiliar.Count == 0)
         {
-            throw new Exception("No se encuentran clientes agregados.");
+            throw new Exception("No se encontró ningún cliente.");
         }
+
+        return listaAuxiliar;
     }
 
 
-    public List <Articulo> FiltrarArticulos (string categoriaSelected)
+    public List<Articulo> FiltrarArticulos(string categoriaSelected)
     {
-       List <Articulo> articulosFinded = new List <Articulo>();
-        
-            foreach (Articulo art in listaArticulos)
+        List<Articulo> articulosFinded = new List<Articulo>();
+
+        foreach (Articulo art in listaArticulos)
+        {
+            if (string.Equals(art.Categoria, categoriaSelected, StringComparison.OrdinalIgnoreCase))
             {
-                if (string.Equals(art.Categoria, categoriaSelected, StringComparison.OrdinalIgnoreCase))
-                {
-                    articulosFinded.Add(art);
-                }
-
-
+                articulosFinded.Add(art);
             }
 
-        
-        if(articulosFinded.Count == 0)
+
+        }
+
+
+        if (articulosFinded.Count == 0)
         {
-            throw new Exception("No se encontró ningún artículo."); 
+            throw new Exception("No se encontró ningún artículo.");
         };
 
 
         return articulosFinded;
     }
 
-    public List <Publicacion> ListarPublicaciones(string dateStart, string dateEnd)
+    public List<Publicacion> ListarPublicaciones(string dateStart, string dateEnd)
     {
         DateTime dateStartCasted = DateTime.Parse(dateStart);
         DateTime dateEndCasted = DateTime.Parse(dateEnd);
-        List <Publicacion> valuesFinded = new List<Publicacion>();
+        List<Publicacion> valuesFinded = new List<Publicacion>();
         foreach (Publicacion element in listaPublicaciones)
         {
-            if (element.FechaPublicacion >=  dateStartCasted && element.FechaFinalizacion <= dateEndCasted)
+            if (element.FechaPublicacion >= dateStartCasted && element.FechaFinalizacion <= dateEndCasted)
             {
                 valuesFinded.Add(element);
             }
         }
 
-        return 
+        return
         valuesFinded;
     }
 }
