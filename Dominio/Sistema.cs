@@ -2,9 +2,9 @@
 public class Sistema
 {
 
-    public static List<Usuario> listaUsuario = new List<Usuario>();
-    public static List<Articulo> listaArticulos = new List<Articulo>();
-    public static List<Publicacion> listaPublicaciones = new List<Publicacion>();
+    public  List<Usuario> listaUsuario = new List<Usuario>();
+    public  List<Articulo> listaArticulos = new List<Articulo>();
+    public  List<Publicacion> listaPublicaciones = new List<Publicacion>();
 
     // PRECARGA DE DATOS.
     private void PrecargarClientes()
@@ -192,5 +192,11 @@ public class Sistema
 
         return
         valuesFinded;
+    }
+
+    public void AgregarArticulo(Articulo unArticulo)
+    {
+            unArticulo.ValidarArticulo();
+            listaArticulos.Add(unArticulo);
     }
 }

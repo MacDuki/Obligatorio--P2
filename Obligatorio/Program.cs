@@ -116,10 +116,9 @@ namespace Consola
                             Console.Clear();
                             string nombreArticulo;
                             string categoriaArticulo;
-                            string precioArticulo;
+                            float precioArticulo;
                             try
                             {
-                                Articulo unArticulo = new Articulo();
                                 Console.WriteLine("Ingrese el nombre del artículo: ");
                                 nombreArticulo = Console.ReadLine();
 
@@ -127,12 +126,10 @@ namespace Consola
                                 categoriaArticulo = Console.ReadLine();
 
                                 Console.WriteLine("Ingrese el precio del artículo: ");
-                                precioArticulo = Console.ReadLine();
+                                precioArticulo = float.Parse(Console.ReadLine()); 
 
-                                unArticulo.ValidarArticulo(nombreArticulo, categoriaArticulo, precioArticulo);
-
-                                Articulo.AgregarArticulo(nombreArticulo, categoriaArticulo, float.Parse(precioArticulo));
-
+                                Articulo unArticulo = new Articulo(nombreArticulo, categoriaArticulo, precioArticulo);
+                                sistema.AgregarArticulo(unArticulo); 
 
 
                                 Console.WriteLine("Producto agregado con éxito. Presione cualquier tecla para continuar o 0 para salir del programa.");

@@ -53,53 +53,47 @@
         }
 
 
-        public void ValidarArticulo(string nombreArticulo, string categoriaArticulo, string precioArticulo)
+        public void ValidarArticulo()
         {
-            ValidarNombre(nombreArticulo);
-            ValidarCategoria(categoriaArticulo);
-            ValidarPrecio(precioArticulo);
+            ValidarNombre();
+            ValidarCategoria();
+            ValidarPrecio();
         }
 
-        private static void ValidarNombre(string nombreArticulo)
+        private void ValidarNombre()
         {
-            if (nombreArticulo.Length < 5)
+            if (Nombre.Length < 5)
             {
                 throw new Exception("Verifique que el nombre del artículo tenga por lo menos 5 caracteres.");
             }
         }
 
-        private static void ValidarCategoria(string categoriaArticulo)
+        private void ValidarCategoria()
         {
-            if (categoriaArticulo.Length < 5)
+            if (Categoria.Length < 5)
             {
                 throw new Exception("Verifique que la categoría tenga un largo de por lo menos 5 caracteres.");
             }
         }
 
-        private static void ValidarPrecio(string precioArticulo)
+        private void ValidarPrecio()
         {
             try
             {
-                if (int.Parse(precioArticulo) <= 0) 
+                if (Precio <= 0)
                 {
-                    throw new Exception("Verifique que el valor ingresado sea mayor a 0."); 
+                    throw new Exception("Verifique que el valor ingresado sea mayor a 0.");
                 }
             }
-            catch (FormatException ex) 
+            catch (FormatException ex)
             {
-                throw new Exception("Verifique que el valor ingresado sea un número.", ex); 
+                throw new Exception("Verifique que el valor ingresado sea un número.", ex);
             }
         }
 
         public void ActualizarPrecio(float nuevoPrecio)
         {
             Precio = nuevoPrecio;
-        }
-
-        public static void AgregarArticulo(string nombre, string categoria, float precio)
-        {
-            Articulo unArticulo = new Articulo(nombre, categoria, precio);
-            Sistema.listaArticulos.Add(unArticulo);
         }
 
 
