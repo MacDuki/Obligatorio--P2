@@ -1,0 +1,12 @@
+D:\Desktop\codeProyects\tests\C#\M-V-C\testing Front\DominioP1\bin\Release\net8.0\DominioP1.deps.json
+D:\Desktop\codeProyects\tests\C#\M-V-C\testing Front\DominioP1\bin\Release\net8.0\DominioP1.dll
+D:\Desktop\codeProyects\tests\C#\M-V-C\testing Front\DominioP1\bin\Release\net8.0\DominioP1.pdb
+D:\Desktop\codeProyects\tests\C#\M-V-C\testing Front\DominioP1\obj\Release\net8.0\DominioP1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\codeProyects\tests\C#\M-V-C\testing Front\DominioP1\obj\Release\net8.0\DominioP1.AssemblyInfoInputs.cache
+D:\Desktop\codeProyects\tests\C#\M-V-C\testing Front\DominioP1\obj\Release\net8.0\DominioP1.AssemblyInfo.cs
+D:\Desktop\codeProyects\tests\C#\M-V-C\testing Front\DominioP1\obj\Release\net8.0\DominioP1.csproj.CoreCompileInputs.cache
+D:\Desktop\codeProyects\tests\C#\M-V-C\testing Front\DominioP1\obj\Release\net8.0\DominioP1.sourcelink.json
+D:\Desktop\codeProyects\tests\C#\M-V-C\testing Front\DominioP1\obj\Release\net8.0\DominioP1.dll
+D:\Desktop\codeProyects\tests\C#\M-V-C\testing Front\DominioP1\obj\Release\net8.0\refint\DominioP1.dll
+D:\Desktop\codeProyects\tests\C#\M-V-C\testing Front\DominioP1\obj\Release\net8.0\DominioP1.pdb
+D:\Desktop\codeProyects\tests\C#\M-V-C\testing Front\DominioP1\obj\Release\net8.0\ref\DominioP1.dll
